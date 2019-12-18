@@ -1,7 +1,8 @@
 I2C 
 
 ```
-LED1=PC_13  
+I2C_SCL=PB_8  
+I2C_SDA=PB_9   
 ```
 
 ![ScreenShot](https://github.com/worrajak/STM32-Micro2562/blob/master/Lab6-I2C/STM32_Citcuit-2.jpg?raw=true)
