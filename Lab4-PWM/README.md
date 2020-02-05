@@ -27,7 +27,9 @@ SSD1306AsciiWire oled;
 Adafruit_BME280 bme;
 
 void setup() {
-
+  
+ Serial.begin(9600);
+ 
  bme.begin(); 
  #if RST_PIN >= 0
     oled.begin(&Adafruit128x64, I2C_ADDRESS, RST_PIN);
@@ -59,8 +61,12 @@ void loop() {
   int pwm_out = map(ADC,0,4095,0,65454);
   pwmWrite(PA8,pwm_out);
   oled.setCursor(0,3);oled.print("volt ADC = ");oled.print(volt,2);
+    Serial.print("Volt = ");Serial.println(volt,2);  
   oled.setCursor(0,4);oled.print("ADC read = ");oled.print(ADC);
+    Serial.print("ADC = ");Serial.println(ADC);
   oled.setCursor(0,5);oled.print("PWM out = ");oled.print(pwm_out);
+    Serial.print("PWM out = ");Serial.println(pwm_out);
+
   delay(500);
 }
 ```
