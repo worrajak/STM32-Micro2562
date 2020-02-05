@@ -1,15 +1,17 @@
 
 ADC -> PWM arduino STM32
 
-Youtube 
+ต่อเชื่อมขา PA8 เข้ากับขา PC14 เพื่อแสดงค่า PWM 
 
+![ScreenShot](https://github.com/worrajak/STM32-Micro2562/blob/master/Lab4-PWM/S__2154498.jpg?raw=true)
+
+Youtube 
 https://www.youtube.com/watch?v=l4d_har-nIg
 
-Credit:  
-https://www.makearduino.com/article/6/stm32-arduino-%E0%B9%80%E0%B8%88%E0%B8%B2%E0%B8%B0%E0%B8%A5%E0%B8%B6%E0%B8%81-pwm-timer
+การคำนวนความถี่และหาค่า duty cycle
+![ScreenShot](https://github.com/worrajak/STM32-Micro2562/blob/master/Lab4-PWM/uCCC037.jpg?raw=true)
 
 Code โดย อ.จักร์ 
-
 ```
 #include <SPI.h>
 #include <Wire.h>
@@ -61,6 +63,8 @@ void loop() {
   oled.setCursor(0,5);oled.print("PWM out = ");oled.print(pwm_out);
   delay(500);
 }
-
-
 ```
+
+Credit:  
+https://www.makearduino.com/article/6/stm32-arduino-%E0%B9%80%E0%B8%88%E0%B8%B2%E0%B8%B0%E0%B8%A5%E0%B8%B6%E0%B8%81-pwm-timer
+
